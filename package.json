@@ -28,7 +28,7 @@
     "format:check": "prettier --check \"src/**/*.{js,ts,tsx,json,css,md}\"",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://$GITHUB_TOKEN@github.com/PrasannaPattankar/messenger-app.git"
   },
   "browserslist": {
     "production": [
