@@ -23,6 +23,9 @@ This project demonstrates:
 - Simple styling with CSS
 
 ---
+## Hosted the application in Github
+
+https://prasannapattankar.github.io/messenger-app/
 
 ## 🚀 Getting Started
 
