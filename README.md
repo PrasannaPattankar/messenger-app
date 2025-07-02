@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+# Messenger App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Messenger app built with **React** and **TypeScript** as part of a coding challenge.
+
+This project demonstrates:
+- Selecting a friend to open a chat
+- Sending messages in an in-memory chat window
+- Clean React component architecture
+- TypeScript best practices
+
+**No backend calls or data persistence implemented, per the challenge instructions.**
+
+---
+
+## ✨ Features
+
+- View a list of 10 friends from JSON data
+- Click to select a friend and see their chat
+- Type and send messages
+- Chats are kept in memory (not persisted on page reload)
+- Fully typed with TypeScript
+- Optimized with React.memo, useCallback, and good coding standards
+- Simple styling with CSS
+
+---
+
+## 🚀 Getting Started
+
+Clone this repository:
+
+```bash
+git clone git@github.com:PrasannaPattankar/messenger-app.git
+cd messenger-app
+
+Install dependencies:
+
+npm install
+
 
 ## Available Scripts
 
@@ -44,3 +79,31 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 📝 Project Structure
+/src
+  /components
+    FriendList.tsx
+    ChatWindow.tsx
+    MessageInput.tsx
+  /data
+    friends.json
+  /types
+    index.ts
+  App.tsx
+  index.tsx
+  index.css
+
+FriendList → Sidebar for selecting friends
+
+ChatWindow → Displays messages and input box
+
+MessageInput → Input field to type/send messages
+
+### Technologies Used
+
+React (with functional components)
+
+TypeScript
+
+CSS
