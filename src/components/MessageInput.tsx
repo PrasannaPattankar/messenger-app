@@ -10,12 +10,9 @@ interface MessageInputProps {
 const MessageInput: React.FC<MessageInputProps> = ({ onSend }) => {
   const [text, setText] = useState<string>('');
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setText(e.target.value);
-    },
-    []
-  );
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value);
+  }, []);
 
   const handleSend = useCallback(() => {
     if (text.trim()) {
@@ -30,7 +27,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend }) => {
         handleSend();
       }
     },
-    [handleSend]
+    [handleSend],
   );
 
   return (

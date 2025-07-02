@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   // Currently selected friend's ID
   const [selectedFriendId, setSelectedFriendId] = useState<string>(
-    friends[0]?.id || ''
+    friends[0]?.id || '',
   );
 
   // In-memory chat histories, keyed by friend ID
@@ -51,13 +51,13 @@ const App: React.FC = () => {
         };
       });
     },
-    [selectedFriendId]
+    [selectedFriendId],
   );
 
   // Find currently selected friend object
   const selectedFriend = useMemo(
     () => friends.find((f) => f.id === selectedFriendId),
-    [friends, selectedFriendId]
+    [friends, selectedFriendId],
   );
 
   if (!selectedFriend) {
