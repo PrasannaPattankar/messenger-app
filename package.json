@@ -2,6 +2,7 @@
   "name": "messenger-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://PrasannaPattankar.github.io/messenger-app",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -18,13 +19,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
-  "format": "prettier --write \"src/**/*.{js,ts,tsx,json,css,md}\""
-},
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,tsx,json,css,md}\"",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -45,6 +50,18 @@
     "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
