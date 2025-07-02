@@ -31,4 +31,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
-        run: GH_TOKEN=${{ secrets.GITHUB_TOKEN }} npm run deploy
+        run: |
+          npx gh-pages -d build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PrasannaPattankar/messenger-app.git
